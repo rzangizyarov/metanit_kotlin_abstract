@@ -1,1 +1,55 @@
-site_name: My Docs
+site_name: Конспект по Kotlin
+site_author: Ruslan Zangizyarov
+theme:
+  name: material
+  features:
+#    - navigation.tabs
+    - navigation.sections
+    - toe.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: ru
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: blue
+      accent: green
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light
+      primary: blue
+      accent: green
+
+nav:
+  - Главная: index.md
+  - 2 Основы языка:
+      - 2_1.md
+      - 2_2.md
+      - 2_3.md
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+#copyright: &copy; 2024 <a href="https://github.com/rzangizyarov"  target="_blank" rel="noopener">Ruslan Zangizyarov</a>
