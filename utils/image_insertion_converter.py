@@ -1,19 +1,12 @@
 import os
 import re
 
-from markdown import markdown
-
 
 class ImageInsertionConverter:
-    # def __init__(self, input_dir: str, output_dir: str):
-    #     # self.input_dir = input_dir
-    #     # self.output_dir = output_dir
-    #     #
-    #     # self.input_files = self.find_md_files(self.input_dir)
 
     @staticmethod
     def find_md_files(dir: str) -> list[str]:
-        """Рекурсивный поиск всех файлов *.md"""
+        """Рекурсивный поиск всех файлов *.md в указанной папке"""
         md_files = []
         for root, dirs, files in os.walk(dir):
             for file in files:
@@ -25,7 +18,6 @@ class ImageInsertionConverter:
     @staticmethod
     def tag_to_ref(input_files: list[str], rewrite: bool = True):
         """Конвертация html-тега в ссылку markdown c использованием inline-стилей MkDocs-material."""
-
         tag_pattern = r'<img\s+src="([^"]+)"\s+width="(\d+)"\s*/>'
 
         def replace_tag(match):
@@ -68,3 +60,15 @@ class ImageInsertionConverter:
             else:
                 with open(file.replace(".md", "") + "_result.md", 'w', encoding='utf-8') as markdown:
                     markdown.write(new_content)
+
+
+if __name__ == "__main__":
+    image_insertion_converter = ImageInsertionConverter()
+
+    image_insertion_converter.tag_to_ref(
+        input_files=image_insertion_converter.find_md_files("../docs"),
+    )
+
+    # image_insertion_converter.ref_to_tag(
+    #     input_files=image_insertion_converter.find_md_files("../docs"),
+    # )
