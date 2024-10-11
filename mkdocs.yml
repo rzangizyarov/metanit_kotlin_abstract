@@ -51,4 +51,4 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
-copyright: Copyright &copy; 2024 <a href="https://twitter.com/_tomchristie">Ruslan Zangizyarov</a>.
+copyright: Copyright &copy; 2024 <a href="https://github.com/rzangizyarov">Ruslan Zangizyarov</a>.
