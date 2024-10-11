@@ -49,3 +49,8 @@
     border-radius: 5px;
   }
 }
+
+.md-grid {
+ /*    max-width: initial; */
+    max-width: 75rem;
+}
