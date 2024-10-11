@@ -1,0 +1,51 @@
+/* Стили для светлой темы */
+:root > * {
+  /* Основные цвета */
+  --md-primary-fg-color:           #7F52FF;
+  --md-primary-fg-color--light:    #7F52FF;
+  --md-primary-fg-color--dark:     #7F52FF;
+
+  /* Цвета выделения кода*/
+  --md-code-hl-number-color:       #008800;
+  /* --md-code-hl-special-color:           ; */
+  --md-code-hl-function-color:     #0000FF;
+  /* --md-code-hl-constant-color:          ; */
+  --md-code-hl-keyword-color:      #008000;
+  --md-code-hl-string-color:       #BA2121;
+  --md-code-hl-name-color:         #000000;
+  --md-code-hl-operator-color:     #AA22FF;
+  --md-code-hl-punctuation-color:  #000000;
+  --md-code-hl-comment-color:      #408080;
+  /* --md-code-hl-generic-color:           ; */
+  --md-code-hl-variable-color:     #0000FF;
+
+  /* Фон для кода */
+  pre code {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
+/* Стили для тёмной темы */
+[data-md-color-scheme="slate"] {
+  --md-code-hl-number-color:       #66BB6A;
+  /* --md-code-hl-special-color:           ; */
+  --md-code-hl-function-color:     #1E88E5;
+  /* --md-code-hl-constant-color:          ; */
+  --md-code-hl-keyword-color:      #4CAF50;
+  --md-code-hl-string-color:       #FF7070;
+  --md-code-hl-name-color:         #FFFFFF;
+  --md-code-hl-operator-color:     #AA22FF;
+  --md-code-hl-punctuation-color:  #FFFFFF;
+  --md-code-hl-comment-color:      #408080;
+  /* --md-code-hl-generic-color:           ; */
+  --md-code-hl-variable-color:     #1E88E5;
+
+  /* Фон для кода */
+  pre code {
+    background-color: #272A35;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
