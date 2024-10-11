@@ -21,7 +21,7 @@
 
   /* Фон для кода */
   pre code {
-    background-color: #FFFFFF;
+    background-color: transparent;
     padding: 10px;
     border-radius: 5px;
   }
