@@ -5,8 +5,8 @@ site_author: Ruslan Zangizyarov
 theme:
   name: material
 
-#  font:
-#    text: menlo
+  font:
+    text: menlo
 #    code: consolas
 
   features:
