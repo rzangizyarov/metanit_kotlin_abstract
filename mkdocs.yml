@@ -31,7 +31,7 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-      primary: blue
+      primary: deep purple
       accent: white
 
 nav:
