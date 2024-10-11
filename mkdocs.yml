@@ -3,7 +3,7 @@ site_author: Ruslan Zangizyarov
 theme:
   name: material
   features:
-#    - navigation.tabs
+    #    - navigation.tabs
     - navigation.sections
     - toe.integrate
     - navigation.top
@@ -34,7 +34,6 @@ nav:
       - 2_2.md
       - 2_3.md
 
-
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -52,4 +51,4 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
-#copyright: &copy; 2024 <a href="https://github.com/rzangizyarov"  target="_blank" rel="noopener">Ruslan Zangizyarov</a>
+copyright: Copyright &copy; 2024 <a href="https://twitter.com/_tomchristie">Ruslan Zangizyarov</a>.
