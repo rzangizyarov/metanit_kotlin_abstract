@@ -5,6 +5,10 @@ site_author: Ruslan Zangizyarov
 theme:
   name: material
 
+#  font:
+#    text: menlo
+#    code: consolas
+
   features:
 #    - navigation.tabs
     - navigation.sections
