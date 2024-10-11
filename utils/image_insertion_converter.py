@@ -1,13 +1,15 @@
 import os
 import re
 
+from markdown import markdown
+
 
 class ImageInsertionConverter:
-    def __init__(self, input_dir: str, output_dir: str):
-        self.input_dir = input_dir
-        self.output_dir = output_dir
-
-        self.input_files = self.find_md_files(self.input_dir)
+    # def __init__(self, input_dir: str, output_dir: str):
+    #     # self.input_dir = input_dir
+    #     # self.output_dir = output_dir
+    #     #
+    #     # self.input_files = self.find_md_files(self.input_dir)
 
     @staticmethod
     def find_md_files(dir: str) -> list[str]:
@@ -26,7 +28,7 @@ class ImageInsertionConverter:
 
         tag_pattern = r'<img\s+src="([^"]+)"\s+width="(\d+)"\s*/>'
 
-        def replace_img(match):
+        def replace_tag(match):
             src = match.group(1)    # Получаем src из совпадения
             width = match.group(2)  # Получаем width из совпадения
             return f'![]({src}){{: style="width:{width}px"}}'
@@ -35,7 +37,7 @@ class ImageInsertionConverter:
             with open(file, 'r', encoding='utf-8') as markdown:
                 content = markdown.read()
 
-            new_content = re.sub(tag_pattern, replace_img, content)
+            new_content = re.sub(tag_pattern, replace_tag, content)
 
             if rewrite:
                 with open(file, 'w', encoding='utf-8') as markdown:
@@ -44,10 +46,25 @@ class ImageInsertionConverter:
                 with open(file.replace(".md", "") + "_result.md", 'w', encoding='utf-8') as markdown:
                     markdown.write(new_content)
 
-
-    def ref_to_tag(self):
+    @staticmethod
+    def ref_to_tag(input_files: list[str], rewrite: bool = True):
         """Конвертация ссылки markdown c использованием inline-стилей MkDocs-material в html-тег."""
-        # for file in self.input_files:
-        pass
+        markdown_pattern = r'!\[\]\(([^)]+)\)\{: style="width:(\d+)px"\}'
 
+        def replace_ref(match):
+            src = match.group(1)    # Получаем src из совпадения
+            width = match.group(2)  # Получаем width из совпадения
+            return f'<img src="{src}" width="{width}"/>'
 
+        for file in input_files:
+            with open(file, 'r', encoding='utf-8') as markdown:
+                content = markdown.read()
+
+            new_content = re.sub(markdown_pattern, replace_ref, content)
+
+            if rewrite:
+                with open(file, 'w', encoding='utf-8') as markdown:
+                    markdown.write(new_content)
+            else:
+                with open(file.replace(".md", "") + "_result.md", 'w', encoding='utf-8') as markdown:
+                    markdown.write(new_content)
