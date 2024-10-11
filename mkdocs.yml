@@ -8,6 +8,7 @@ theme:
   features:
     #    - navigation.tabs
     - navigation.sections
+    - navigation.footer
     - toe.integrate
     - navigation.top
     - search.suggest
