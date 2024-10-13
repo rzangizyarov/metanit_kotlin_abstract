@@ -40,7 +40,7 @@ theme:
 
 nav:
   - Главная: index.md
-  - 2 Основы языка:
+  - Основы языка:
       - 2_1.md
       - 2_2.md
       - 2_3.md
@@ -72,8 +72,9 @@ extra_css:
 #        cover_subtitle: версия для PDF
 #        toc_title: Оглавление
 #        toc_level: 3
+#        ordered_chapter_level: 1
 #        two_columns_level: 3
-#        output_path: ./help.pdf
+#        output_path: ../pdf/Kotlin - metanit.com.pdf
 
 #extra:
 #  generator: false
