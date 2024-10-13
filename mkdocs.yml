@@ -65,22 +65,24 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
-#plugins:
-#    - with-pdf:
-#        author: Ruslan Zangizyarov
-#        copyright: Copyright &copy; 2024 Ruslan Zangizyarov
-#
-#        cover: true
-#        cover_title: Конспект по Kotlin
-#        cover_subtitle: версия для PDF
-#
-#        toc_title: Оглавление
-#        toc_level: 3
-#        ordered_chapter_level: 1
-#
-#        two_columns_level: 3
-#
-#        output_path: ../pdf/Kotlin - metanit.com.pdf
+plugins:
+    - with-pdf:
+        enabled: false
+
+        author: Ruslan Zangizyarov
+        copyright: Copyright &copy; 2024 Ruslan Zangizyarov
+
+        cover: true
+        cover_title: Конспект по Kotlin
+        cover_subtitle: версия для PDF
+
+        toc_title: Оглавление
+        toc_level: 3
+        ordered_chapter_level: 1
+
+        two_columns_level: 3
+
+        output_path: ../pdf/Kotlin - metanit.com.pdf
 
 #extra:
 #  generator: false
