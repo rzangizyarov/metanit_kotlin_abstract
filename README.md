@@ -32,13 +32,14 @@ mkdocs gh-deploy
 ## Инструкция по сборке в PDF с Docker
 
 1. Загрузить [Docker](https://www.docker.com/) и выполнить перезагрузку.
-2. Создать файл `dockerfile` с содержимым:
+2. Создать файл `dockerfile` с содержимым ([источник 1](https://github.com/orzih/mkdocs-with-pdf/issues/137), 
+   [источник 2](https://github.com/alpinelinux/docker-alpine/issues/181)):
 
     ```
     FROM squidfunk/mkdocs-material
-    RUN apk add build-base ttf-ubuntu-font-family libffi-dev zlib-dev 
-      libwebp-dev jpeg-dev harfbuzz-dev fribidi-dev freetype-dev 
-      cairo-dev musl-dev pango-dev gdk-pixbuf-dev 
+    
+    RUN apk add --no-cache build-base ttf-freefont \
+      && apk add --no-cache --virtual libffi-dev-3.2.1-r6 zlib-dev libwebp-dev jpeg-dev harfbuzz-dev fribidi-dev freetype-dev cairo-dev musl-dev pango-dev gdk-pixbuf-dev \
       && pip install mkdocs-with-pdf
     ```
    
@@ -46,14 +47,14 @@ mkdocs gh-deploy
 4. Создать docker образ командой:
 
     ```bash
-    docker build . -t metanit_kotlin_abstract
+    docker build . --tag mkdocs-with-pdf
     ```
 
 5. Отредактировать `mkdocs.yml` чтобы включить в нём сборку сайта в PDF-файл.
 6. Запустить сборку сайта уже с нашим с образом
     
     ```bash
-    docker run --rm -it -v ${PWD}:/docs metanit_kotlin_abstract build
+    docker run --rm -it -v ${PWD}:/docs mkdocs-with-pdf build
     ```
 
 ## Инструкция по сборке в HTML

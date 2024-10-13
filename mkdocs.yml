@@ -65,6 +65,15 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
+#plugins:
+#    - with-pdf:
+#        cover: true
+#        cover_title: Конспект по Kotlin
+#        cover_subtitle: версия для PDF
+#        toc_title: Оглавление
+#        toc_level: 3
+#        output_path: ./help.pdf
+
 #extra:
 #  generator: false
 
