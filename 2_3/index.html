@@ -426,11 +426,44 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#any" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тип Any
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#type-inference" class="md-nav__link">
     <span class="md-ellipsis">
       Литералы примитивных типов и строк для выведения типа (type inference)
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Что происходит при преобразовании значений
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Что происходит при преобразовании значений">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Осторожнее с преобразованием
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -522,11 +555,44 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#any" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тип Any
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#type-inference" class="md-nav__link">
     <span class="md-ellipsis">
       Литералы примитивных типов и строк для выведения типа (type inference)
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Что происходит при преобразовании значений
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Что происходит при преобразовании значений">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Осторожнее с преобразованием
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -555,11 +621,13 @@
 <li><code>Int</code>: занимает 4 байта (2<sup>32</sup> комбинаций); хранит целое число от –2 147 483 648 (–2<sup>31</sup>) до 2 147 483 647 (2<sup>31</sup> – 1)</li>
 <li><code>Long</code>: занимает 8 байт (2<sup>64</sup> комбинаций); хранит целое число от –9 223 372 036 854 775 808 (–2<sup>63</sup>) до 9 223 372 036 854 775 807 (2<sup>63</sup>–1)</li>
 </ul>
-<p>Также Kotlin поддерживает целочисленные типы без знаков<br />
-- <code>UByte</code>: занимает 1 байт; хранит целое число от 0 до 255;<br />
-- <code>UShort</code>: занимает 2 байта; хранит целое число от 0 до 65 535;<br />
-- <code>UInt</code>: занимает 4 байта; хранит целое число от 0 до 2<sup>32</sup> - 1;<br />
-- <code>ULong</code>: занимает 8 байт; хранит целое число от 0 до 2<sup>64</sup>-1.  </p>
+<p>Также Kotlin поддерживает целочисленные типы без знаков:</p>
+<ul>
+<li><code>UByte</code>: занимает 1 байт; хранит целое число от 0 до 255;  </li>
+<li><code>UShort</code>: занимает 2 байта; хранит целое число от 0 до 65 535;  </li>
+<li><code>UInt</code>: занимает 4 байта; хранит целое число от 0 до 2<sup>32</sup> - 1;  </li>
+<li><code>ULong</code>: занимает 8 байт; хранит целое число от 0 до 2<sup>64</sup>-1.  </li>
+</ul>
 <p>Объекты целочисленных типов хранят целые числа:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">a</span><span class="p">:</span><span class="w"> </span><span class="kt">Byte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="m">10</span>
@@ -631,22 +699,66 @@
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
 </code></pre></div>
 <p>Строка может содержать эскейп-последовательности</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">text</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello \nKotlin&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">text</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, \nKotlin!&quot;</span><span class="w">  </span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="c1">// Hello,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">                  </span><span class="c1">// Kotlin!</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span>
+</code></pre></div>
+<p>Для большего удобства при создании многострочного текста можно использовать тройные двойные кавычки:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;&quot;Hello, </span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="s">                 |Kotlin!&quot;&quot;&quot;</span><span class="p">.</span><span class="na">trimMargin</span><span class="p">()</span><span class="w"> </span><span class="c1">// Обрезать отступ от края.</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="c1">// Hello,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">                  </span><span class="c1">// Kotlin!</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="any">Тип Any</h2>
+<p>Тип <code>Any</code> - является корневым элементом в иерархии наследования всех классов в Kotlin. Поэтому переменной с типом <code>Any</code> можно присвоить любой объект. Разумеется, работа с объектом в данном случае будет вестись на уровне функционала типа <code>Any</code>. Все иные методы и атрибуты объекта будут скрыты.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">number</span><span class="p">:</span><span class="w"> </span><span class="kt">Any</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;twelve&quot;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12.0</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">}</span>
 </code></pre></div>
 <h2 id="type-inference">Литералы примитивных типов и строк для выведения типа (type inference)</h2>
 <p>Компилятор Kotlin позволяет выводить тип переменной на основании данных, которым переменная инициализируется. Поэтому при инициализации переменной тип можно опустить. Ниже приведены литералы примитивных типов и строк. </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w">        </span><span class="c1">// Целое число по умолчанию указывает на тип Int.</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">sum2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="n">U</span><span class="w">     </span><span class="c1">// Целое число с U на конце по умолчанию указывает на тип UInt.</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">                   </span><span class="c1">// * Суффикc U также применяется при явном указании типов: </span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">                   </span><span class="c1">//   UByte, UShort, UInt, ULong.</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kd">val</span><span class="w"> </span><span class="nv">sum1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45L</span><span class="w">     </span><span class="c1">// Целое число с L на конце указывается на тип Long</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kd">val</span><span class="w"> </span><span class="nv">sum3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="n">UL</span><span class="w">    </span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="kd">val</span><span class="w"> </span><span class="nv">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4.0</span><span class="w">   </span><span class="c1">// Число с плавающей точкой по умолчанию указывает на тип Double</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">57.0f</span><span class="w"> </span><span class="c1">// Число с плавающей точкой и f или F на конце по умолчанию </span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">                   </span><span class="c1">// указывает на тип Float.</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="kd">val</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w">        </span><span class="c1">// Содержимое одинарных кавычек указывает на Char.</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">                   </span><span class="c1">// * Может быть только один символ.</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Tom&quot;</span><span class="w">   </span><span class="c1">// Содержимое двойных, либо трёх двойных кавычек указывает на String.</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w">        </span><span class="c1">// Целое число по умолчанию указывает на тип Int.</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">sum2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="n">U</span><span class="w">     </span><span class="c1">// Целое число с U на конце по умолчанию указывает на тип UInt.</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">                   </span><span class="c1">// * Суффикc U также применяется при явном указании типов: </span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">                   </span><span class="c1">//   UByte, UShort, UInt, ULong.</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="kd">val</span><span class="w"> </span><span class="nv">sum1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45L</span><span class="w">     </span><span class="c1">// Целое число с L на конце указывается на тип Long</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="kd">val</span><span class="w"> </span><span class="nv">sum3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="n">UL</span><span class="w">    </span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="kd">val</span><span class="w"> </span><span class="nv">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4.0</span><span class="w">   </span><span class="c1">// Число с плавающей точкой по умолчанию указывает на тип Double</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">57.0f</span><span class="w"> </span><span class="c1">// Число с плавающей точкой и f или F на конце по умолчанию </span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">                   </span><span class="c1">// указывает на тип Float.</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="kd">val</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w">        </span><span class="c1">// Содержимое одинарных кавычек указывает на Char.</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">                   </span><span class="c1">// * Может быть только один символ.</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Tom&quot;</span><span class="w">   </span><span class="c1">// Содержимое двойных, либо трёх двойных кавычек указывает на String.</span>
+</code></pre></div>
+<h2 id="_5">Что происходит при преобразовании значений</h2>
+<p>Каждый числовой объект содержит следующие методы для преобразования: <br />
+- <code>.toByte()</code>;<br />
+- <code>.toShort()</code>; <br />
+- <code>.toInt()</code>;<br />
+- <code>.toLong()</code>;<br />
+- <code>.toFloat()</code>;<br />
+- <code>.toDouble()</code>.  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5.0</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">toInt</span><span class="p">()</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>При преобразовании будет создан новый объект типа <code>Int</code> со значением <code>5</code>. Компилятор видит, что метод <code>.toInt()</code> вовзращает объект типа <code>Int</code>, поэтому переменной <code>b</code> будет присвоен тип <code>Int</code>. В <code>b</code> сохраняется ссылка на объект <code>a</code>.</p>
+<p>Такое решение хорошо работает, если вы преобразуете значение к типу большей разрядности. Но что делать, если новый объект слишком мал для хранения значения?</p>
+<h3 id="_6">Осторожнее с преобразованием</h3>
+<p>Если значение исходного объекта имеет больший размер, чем максимальный размер типа, к которому он преобразуется, то оно будет усечено. Компилятор считает, что вы действуете сознательно, так что код откомпилируется. </p>
+<p>Теперь предположим, что у вас есть число с плавающей точкой и вы просто хотите отделить его целую часть. Если преобразовать чиcло в Int, то компилятор отсечет всю дробную часть:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">x</span><span class="p">:</span><span class="w"> </span><span class="kt">Long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1234567890123</span><span class="w"> </span><span class="c1">// Вне диапазона допустимых значений Int</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">y</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="na">toInt</span><span class="p">()</span><span class="w">      </span><span class="c1">// 1912276171</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">}</span>
 </code></pre></div>
 
 
