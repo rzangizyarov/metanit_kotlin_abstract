@@ -18,7 +18,7 @@ class ImageInsertionConverter:
     @staticmethod
     def tag_to_ref(input_files: list[str], rewrite: bool = True):
         """Конвертация html-тега в ссылку markdown c использованием inline-стилей MkDocs-material."""
-        tag_pattern = r'<img\s+src="([^"]+)"\s+width="(\d+)"\s*/>'
+        tag_pattern = r"""<img\s+src=["']([^"']+)["']\s+width=["'](\d+)["']\s*(\/>|><\/img>)"""
 
         def replace_tag(match):
             src = match.group(1)    # Получаем src из совпадения
