@@ -397,6 +397,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Резюме
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -439,6 +448,69 @@
   
   <span class="md-ellipsis">
     2.4 Консольный ввод и вывод
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 Операции с числами
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.6 Логические (условные) выражения и логические операции
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.7 Условные конструкции
   </span>
   
 
@@ -512,6 +584,15 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       Компиляторы и интерпретаторы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Резюме
     </span>
   </a>
   
@@ -632,6 +713,25 @@
 <li>JavaScript. Для запуска в веб-браузере.</li>
 <li>Машинный код. Собственные двоичные файлы, скомпилированные для конкретных платформ и процессоров.</li>
 </ul>
+<h2 id="_4">Резюме</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// Переменнная - контейнер, содержащий какое-либо значение примитивного типа данных, </span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">// либо ссылку на объект класса.</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">с</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w">      </span><span class="c1">// Объявление immutable-переменной (ссылку нельзя будет сменить).</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">с</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w">           </span><span class="c1">// Инициализация переменной.</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w">  </span><span class="c1">// Можно инициализировать переменную сразу после объявления. </span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w">       </span><span class="c1">// 1. Компилятор видит, что значение `5` является целым число. </span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">                    </span><span class="c1">//    Создаётся объект `5` типа `Int`.</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">                    </span><span class="c1">// 2. На основе типа объекта будет выведен тип переменной `a` - `Int`.</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">                    </span><span class="c1">//    Этот тип навсегда закрепляется за переменной. </span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">                    </span><span class="c1">// 3. В переменной `a` сохраняется ссылка на объект `5`.</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w">       </span><span class="c1">// Объявление immutable-переменной (можно изменить ссылку на другой объект того же или </span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">                    </span><span class="c1">// совместимого типа). Если не планируется менять значение переменной, строго рекомендуется </span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">                    </span><span class="c1">// определять её с val.</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="p">}</span>
+</code></pre></div>
 
 
 
