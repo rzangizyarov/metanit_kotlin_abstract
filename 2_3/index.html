@@ -577,6 +577,116 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.8 Циклы for, while и do-while
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.9 Диапазоны (range)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Функциональное программирование
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Функциональное программирование
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1 Функции и их параметры
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -883,7 +993,7 @@
 <p>При преобразовании будет создан новый объект типа <code>Int</code> со значением <code>5</code>. Компилятор видит, что метод <code>.toInt()</code> возвращает объект типа <code>Int</code>, поэтому переменной <code>b</code> будет присвоен тип <code>Int</code>. В <code>b</code> сохраняется ссылка на объект <code>5</code>.</p>
 <p>Такое решение хорошо работает, если вы преобразуете значение к типу большей разрядности. Но что делать, если новый объект слишком мал для хранения значения?</p>
 <h3 id="_7">Осторожнее с преобразованием</h3>
-<p>Если значение исходного объекта имеет больший размер, чем максимальный размер типа, к которому он преобразуется, то оно будет усечено. Компилятор считает, что вы действуете сознательно, так что код откомпилируется. </p>
+<p>Если значение исходного объекта имеет больший размер, чем максимально допустимый размер типа, к которому он преобразуется, то оно будет усечено. Компилятор считает, что вы действуете сознательно, так что код откомпилируется. </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">x</span><span class="p">:</span><span class="w"> </span><span class="kt">Long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1234567890123</span><span class="w"> </span><span class="c1">// Вне диапазона допустимых значений Int</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">y</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="na">toInt</span><span class="p">()</span><span class="w">      </span><span class="c1">// 1912276171</span>

@@ -520,6 +520,116 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.8 Циклы for, while и do-while
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.9 Диапазоны (range)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Функциональное программирование
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Функциональное программирование
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1 Функции и их параметры
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -621,7 +731,6 @@
 <li>примитивные типы переменных хранят непосредственно значение байтов данных;</li>
 <li>ссылочные типы переменных хранят байты адреса объекта в <em>heap</em>.</li>
 </ul>
-<p>Вероятно, в Kotlin Native предусмотрены только ссылочные переменные.</p>
 <p>Примитивные типы данных в Java: <code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>, <code>double</code>, <code>float</code>, <code>boolean</code>, <code>char</code>;<br />
 Ссылочные типы данных: те, что создаются с помощью конструкторов классов.</p>
 <table>
@@ -645,8 +754,8 @@
 <td>---</td>
 </tr>
 <tr>
-<td>Значение по умолчанию зависит от типа (<code>int</code> - <code>0</code>, <code>float</code> - <code>0.0f</code>)</td>
-<td>Значение по умолчанию - <code>null</code> (нет ссылки)</td>
+<td>Значение глобальных переменнных по умолчанию зависит от типа (<code>int</code> - <code>0</code>, <code>float</code> - <code>0.0f</code>)</td>
+<td>Значение глобальных переменных по умолчанию - <code>null</code> (нет ссылки)</td>
 </tr>
 <tr>
 <td>В аргументы методов попадают копии значения переменной (передача по значению)</td>
@@ -661,6 +770,9 @@
 <h2 id="_1">Изменяемые и неизменяемые переменные</h2>
 <p>Kotlin - статически типизированный язык - типы переменных проверяются компилятором во время компиляции, а не во время выполнения.</p>
 <p>Перед использованием переменной необходимо обязательно инициализровать её начальным значением, иначе будет выведена ошибка. Синтаксис объявления и инициализации переменной:</p>
+<blockquote>
+<p>Вероятно, в Kotlin Native предусмотрены только ссылочные переменные, поэтому в примерах ниже примитивные типы рассматриваются как ссылочные.</p>
+</blockquote>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&lt;</span><span class="n">тип_переменной_</span><span class="p">(</span><span class="n">val_или_var</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">имя_переменной</span><span class="o">&gt;</span><span class="p">:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">тип</span><span class="w"> </span><span class="n">данных</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="n">значение_или_объект</span><span class="o">&gt;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">a</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w">      </span><span class="c1">// Объявление переменной.</span>
